@@ -1,5 +1,5 @@
 import React from "react";
-import FoodCard from "./FoodCard";
+import RecipeCard from "./RecipeCard";
 
 const Home = ({ recipes, loading, error }) => {
 	return (
@@ -14,7 +14,7 @@ const Home = ({ recipes, loading, error }) => {
 				{loading && <p>{error ? error : "loading..."}</p>}
 
 				{recipes?.length > 0 &&
-					recipes.map((recipe) => <FoodCard recipe={recipe} key={recipe.recipe_id} />)
+					recipes.map((recipe) => <RecipeCard recipe={recipe} key={recipe.recipe_id} />)
 				}
 			</div>
 		</div>

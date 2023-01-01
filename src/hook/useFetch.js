@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 export const useFetch = () => {
-	const { id } = useParams();
+	const {id} = useParams();
 	const [recipe, setRecipe] = useState({});
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState("");
@@ -19,6 +19,6 @@ export const useFetch = () => {
 			}
 		};
 		getItemData();
-	}, []);
+	}, [id]);
 	return { recipe, error, loading };
 };
